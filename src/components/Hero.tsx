@@ -12,9 +12,11 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-3xl mx-auto w-full">
-        <h1 className="font-display font-extrabold text-7xl md:text-9xl text-white tracking-widest uppercase leading-none drop-shadow-lg mb-2">
-          Me<span className="text-amber-brand">s</span>tizo
-        </h1>
+        <img
+          src="/MestizoNombre.jpeg"
+          alt="Mestizo"
+          className="mx-auto mb-2 h-28 md:h-40 w-auto object-contain drop-shadow-lg"
+        />
         <p className="text-cream text-sm md:text-base tracking-[0.4em] uppercase font-light mt-1 drop-shadow">
           Barra Criolla · San Isidro
         </p>

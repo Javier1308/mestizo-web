@@ -2,9 +2,7 @@ export default function Footer() {
   return (
     <footer className="bg-brown-dark text-cream/60 py-8 text-center text-sm">
       <div className="max-w-4xl mx-auto px-6">
-        <p className="font-display font-bold text-cream text-xl mb-1 tracking-widest uppercase">
-          Me<span className="text-amber-brand">s</span>tizo
-        </p>
+        <img src="/MestizoNombre.jpeg" alt="Mestizo" className="mx-auto mb-1 h-14 w-auto object-contain" />
         <p className="text-xs tracking-widest mb-4">Barra Criolla · San Isidro</p>
         <div className="flex justify-center gap-6 mb-4">
           <a

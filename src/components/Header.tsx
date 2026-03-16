@@ -18,9 +18,7 @@ export default function Header() {
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
           <img src="/Llama1.jpeg" alt="Mestizo llama" className="w-9 h-9 rounded-full object-cover" />
-          <span className="text-white font-display font-bold text-2xl tracking-widest uppercase">
-            Me<span className="text-amber-brand">s</span>tizo
-          </span>
+          <img src="/MestizoNombre.jpeg" alt="Mestizo" className="h-8 w-auto object-contain" />
           <span className="text-cream text-xs font-light tracking-widest hidden sm:block">| Barra Criolla</span>
         </a>
 
