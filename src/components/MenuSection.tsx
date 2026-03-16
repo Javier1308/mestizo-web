@@ -58,9 +58,9 @@ export default function MenuSection() {
         </h2>
 
         {/* Botón PDF */}
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center mb-4">
           <a
-            href="/CartaDigitalMestizo.pdf"
+            href="https://mestizo.pe/CartaDigitalMestizo.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-brown text-cream font-semibold px-6 py-2.5 rounded-full text-sm hover:bg-brown-dark transition-colors shadow-md"
