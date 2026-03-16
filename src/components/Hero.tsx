@@ -13,9 +13,9 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-3xl mx-auto w-full">
         <img
-          src="/MestizoNombre.jpeg"
+          src="/LogoSinFondo.png"
           alt="Mestizo"
-          className="mx-auto mb-2 h-28 md:h-40 w-auto object-contain drop-shadow-lg"
+          className="mx-auto mb-2 w-72 md:w-[28rem] object-contain drop-shadow-lg"
         />
         <p className="text-cream text-sm md:text-base tracking-[0.4em] uppercase font-light mt-1 drop-shadow">
           Barra Criolla · San Isidro
