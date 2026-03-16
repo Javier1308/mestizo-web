@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const platos = [
   { nombre: 'Ají de Gallina',            img: '/AjiGallina.jpeg' },
   { nombre: 'Carapulcra con Sopa Seca',  img: '/CarapulcraSopaseca.jpeg' },
   { nombre: 'Cau Cau',                   img: '/CauCau.jpeg' },
   { nombre: 'Chanfainita',               img: '/Chanfainita.jpeg' },
-  { nombre: 'Lomo Saltado',              img: '/LomoSaltado.jpeg' },
   { nombre: 'Olluquito con Carapulcra',  img: '/OlluquitoCarapulcra.jpeg' },
   { nombre: 'Papa a la Huancaína',       img: '/PapaHuancaina.jpeg' },
   { nombre: 'Seco con Frejoles',         img: '/SecoFrejoles.jpeg' },
@@ -13,13 +12,21 @@ const platos = [
 
 export default function BuffetSection() {
   const [current, setCurrent] = useState(0)
+  const [auto, setAuto] = useState(true)
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    if (!auto) return
+    timerRef.current = setInterval(() => {
       setCurrent(prev => (prev + 1) % platos.length)
     }, 3000)
-    return () => clearInterval(timer)
-  }, [])
+    return () => { if (timerRef.current) clearInterval(timerRef.current) }
+  }, [auto])
+
+  function goTo(index: number) {
+    setAuto(false)
+    setCurrent(index)
+  }
 
   return (
     <section id="buffet" className="relative py-20 bg-brown text-cream overflow-hidden">
@@ -57,7 +64,7 @@ export default function BuffetSection() {
           <div className="flex items-center gap-3">
             {/* Flecha izquierda */}
             <button
-              onClick={() => setCurrent(prev => (prev - 1 + platos.length) % platos.length)}
+              onClick={() => goTo((current - 1 + platos.length) % platos.length)}
               className="flex-shrink-0 bg-brown-dark border border-amber-brand/40 hover:border-amber-brand text-amber-brand rounded-full w-10 h-10 flex items-center justify-center transition-colors"
               aria-label="Plato anterior"
             >
@@ -83,7 +90,7 @@ export default function BuffetSection() {
 
             {/* Flecha derecha */}
             <button
-              onClick={() => setCurrent(prev => (prev + 1) % platos.length)}
+              onClick={() => goTo((current + 1) % platos.length)}
               className="flex-shrink-0 bg-brown-dark border border-amber-brand/40 hover:border-amber-brand text-amber-brand rounded-full w-10 h-10 flex items-center justify-center transition-colors"
               aria-label="Plato siguiente"
             >
@@ -103,7 +110,7 @@ export default function BuffetSection() {
             {platos.map((_, i) => (
               <button
                 key={i}
-                onClick={() => setCurrent(i)}
+                onClick={() => goTo(i)}
                 className="w-2.5 h-2.5 rounded-full transition-colors"
                 style={{ background: i === current ? 'var(--color-amber-brand, #D4A017)' : 'rgba(255,255,255,0.3)' }}
                 aria-label={`Ver ${platos[i].nombre}`}
