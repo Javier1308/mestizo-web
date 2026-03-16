@@ -53,6 +53,7 @@ export default function BuffetSection() {
 
         {/* Carrusel */}
         <div className="relative w-full max-w-2xl mx-auto mb-8">
+          {/* Imagen */}
           <div className="relative overflow-hidden rounded-2xl aspect-[4/3] bg-brown-dark shadow-2xl">
             {platos.map((plato, i) => (
               <div
@@ -65,18 +66,37 @@ export default function BuffetSection() {
                   alt={plato.nombre}
                   className="w-full h-full object-cover"
                 />
-                {/* Título con degradado */}
-                <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent px-6 py-5">
-                  <h3 className="text-cream font-display text-2xl font-bold text-center">
-                    {plato.nombre}
-                  </h3>
-                </div>
               </div>
             ))}
+
+            {/* Flecha izquierda */}
+            <button
+              onClick={() => setCurrent(prev => (prev - 1 + platos.length) % platos.length)}
+              className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors z-10"
+              aria-label="Plato anterior"
+            >
+              &#8592;
+            </button>
+
+            {/* Flecha derecha */}
+            <button
+              onClick={() => setCurrent(prev => (prev + 1) % platos.length)}
+              className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors z-10"
+              aria-label="Plato siguiente"
+            >
+              &#8594;
+            </button>
+          </div>
+
+          {/* Título independiente */}
+          <div className="bg-brown-dark border border-amber-brand/40 rounded-xl px-6 py-3 mt-3 text-center">
+            <h3 className="text-amber-brand font-display text-xl font-bold tracking-wide">
+              {platos[current].nombre}
+            </h3>
           </div>
 
           {/* Indicadores */}
-          <div className="flex justify-center gap-2 mt-4">
+          <div className="flex justify-center gap-2 mt-3">
             {platos.map((_, i) => (
               <button
                 key={i}
