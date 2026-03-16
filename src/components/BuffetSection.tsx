@@ -25,7 +25,7 @@ export default function BuffetSection() {
 
         <div className="flex justify-center mb-8">
           <span className="bg-amber-brand text-brown-dark font-bold text-3xl px-8 py-3 rounded-full">
-            S/. 38.90
+            S/ 38.90
           </span>
         </div>
 
