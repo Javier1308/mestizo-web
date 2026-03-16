@@ -53,35 +53,38 @@ export default function BuffetSection() {
 
         {/* Carrusel */}
         <div className="relative w-full max-w-2xl mx-auto mb-8">
-          {/* Imagen */}
-          <div className="relative overflow-hidden rounded-2xl aspect-[4/3] bg-brown-dark shadow-2xl">
-            {platos.map((plato, i) => (
-              <div
-                key={plato.nombre}
-                className="absolute inset-0 transition-opacity duration-700"
-                style={{ opacity: i === current ? 1 : 0 }}
-              >
-                <img
-                  src={plato.img}
-                  alt={plato.nombre}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-
+          {/* Fila: flecha izquierda + imagen + flecha derecha */}
+          <div className="flex items-center gap-3">
             {/* Flecha izquierda */}
             <button
               onClick={() => setCurrent(prev => (prev - 1 + platos.length) % platos.length)}
-              className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors z-10"
+              className="flex-shrink-0 bg-brown-dark border border-amber-brand/40 hover:border-amber-brand text-amber-brand rounded-full w-10 h-10 flex items-center justify-center transition-colors"
               aria-label="Plato anterior"
             >
               &#8592;
             </button>
 
+            {/* Imagen */}
+            <div className="relative flex-1 overflow-hidden rounded-2xl aspect-[4/3] bg-brown-dark shadow-2xl">
+              {platos.map((plato, i) => (
+                <div
+                  key={plato.nombre}
+                  className="absolute inset-0 transition-opacity duration-700"
+                  style={{ opacity: i === current ? 1 : 0 }}
+                >
+                  <img
+                    src={plato.img}
+                    alt={plato.nombre}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+
             {/* Flecha derecha */}
             <button
               onClick={() => setCurrent(prev => (prev + 1) % platos.length)}
-              className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/75 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors z-10"
+              className="flex-shrink-0 bg-brown-dark border border-amber-brand/40 hover:border-amber-brand text-amber-brand rounded-full w-10 h-10 flex items-center justify-center transition-colors"
               aria-label="Plato siguiente"
             >
               &#8594;
