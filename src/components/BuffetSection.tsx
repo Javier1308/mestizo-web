@@ -92,7 +92,7 @@ export default function BuffetSection() {
           </div>
 
           {/* Título independiente */}
-          <div className="bg-brown-dark border border-amber-brand/40 rounded-xl px-6 py-3 mt-3 text-center">
+          <div className="bg-brown-dark border border-amber-brand/40 rounded-xl px-6 py-3 mt-3 text-center w-1/2 mx-auto">
             <h3 className="text-amber-brand font-display text-xl font-bold tracking-wide">
               {platos[current].nombre}
             </h3>
