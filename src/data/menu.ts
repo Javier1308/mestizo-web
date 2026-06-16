@@ -51,6 +51,8 @@ export const makis = [
   { name: 'Tori Brasa', desc: 'Relleno con nuggets de pollo y palta, coronado con láminas de pollo rostizado al chimichurri y acompañado con salsa namban. (Ideal para alérgicos al langostino)', price: 32 },
   { name: 'Tuna Tartar Maki', desc: 'Relleno de langostinos furai y palta, acompañado con tartar de atún, verduras frescas y alcaparras.', price: 32 },
   { name: 'Tropical Maki', desc: 'Coronado con láminas de mango, escarchado con ajonjolí tostado, relleno de langostinos furai y queso crema bañado en salsa pasión.', price: 32 },
+  { name: 'Karaage', desc: 'Filetes de pollo frito empanizado.', price: 28 },
+  { name: 'Poke Bowl', desc: 'Filetes de pollo frito acompañados de arroz japonés.', price: { chico: 34, grande: 42 } },
 ]
 
 // BEBIDAS (sin cambios)
