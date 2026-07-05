@@ -27,9 +27,25 @@ export default function BebidasSection() {
         <p className="text-amber-brand text-sm tracking-[0.3em] uppercase font-medium text-center mb-3">
           Para Compartir
         </p>
-        <h2 className="font-display text-4xl md:text-5xl font-bold text-center mb-10 uppercase">
+        <h2 className="font-display text-4xl md:text-5xl font-bold text-center mb-6 uppercase">
           Bebidas
         </h2>
+
+        {/* Botón PDF */}
+        <div className="flex justify-center mb-8">
+          <a
+            href="/CartaTragosMestizo.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 font-semibold px-6 py-2.5 rounded-full text-sm transition-colors shadow-md"
+            style={{ backgroundColor: '#D4A843', color: '#2C1810' }}
+          >
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM6 20V4h5v7h7v9H6z"/>
+            </svg>
+            Carta de Tragos en PDF
+          </a>
+        </div>
 
         {/* Tabs */}
         <div className="flex flex-wrap justify-center gap-2 mb-10">
