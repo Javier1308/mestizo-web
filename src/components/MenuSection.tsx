@@ -13,26 +13,26 @@ function DishCard({ item }: { item: MenuItem }) {
   return (
     <div
       className="flex items-start justify-between gap-4 py-4 last:border-0 group"
-      style={{ borderBottom: '1px solid rgba(212, 201, 181, 0.5)' }}
+      style={{ borderBottom: '1px solid rgba(61, 80, 74, 0.15)' }}
     >
       <div className="flex-1">
         <h4
           className="font-bold text-sm tracking-wide uppercase transition-colors"
-          style={{ color: '#5C3D2E', letterSpacing: '0.05em' }}
+          style={{ color: '#3d504a', letterSpacing: '0.05em' }}
         >
           {item.name}
         </h4>
         {item.desc && (
-          <p className="text-sm mt-1 leading-relaxed" style={{ color: '#7A5C40' }}>{item.desc}</p>
+          <p className="text-sm mt-1 leading-relaxed" style={{ color: '#99a690' }}>{item.desc}</p>
         )}
       </div>
       {typeof item.price === 'object' ? (
         <div className="text-right shrink-0">
-          <div className="text-xs font-semibold" style={{ color: '#7A5C40' }}>Chico <span className="font-bold text-base" style={{ color: '#5C3D2E' }}>{item.price.chico}</span></div>
-          <div className="text-xs font-semibold" style={{ color: '#7A5C40' }}>Grande <span className="font-bold text-base" style={{ color: '#5C3D2E' }}>{item.price.grande}</span></div>
+          <div className="text-xs font-semibold" style={{ color: '#99a690' }}>Chico <span className="font-bold text-base" style={{ color: '#3d504a' }}>{item.price.chico}</span></div>
+          <div className="text-xs font-semibold" style={{ color: '#99a690' }}>Grande <span className="font-bold text-base" style={{ color: '#3d504a' }}>{item.price.grande}</span></div>
         </div>
       ) : (
-        <span className="font-bold text-lg shrink-0" style={{ color: '#5C3D2E' }}>
+        <span className="font-bold text-lg shrink-0" style={{ color: '#3d504a' }}>
           {item.price}
         </span>
       )}
@@ -62,7 +62,7 @@ export default function MenuSection() {
   const items = itemsMap[tab]
 
   return (
-    <section id="carta" className="relative py-20 overflow-hidden" style={{ backgroundColor: '#F5F0E8' }}>
+    <section id="carta" className="relative py-20 overflow-hidden" style={{ backgroundColor: '#e8e2d9' }}>
       {/* Llama watermark */}
       <img
         src="/llama2.png"
@@ -74,24 +74,24 @@ export default function MenuSection() {
       <div className="relative z-10 max-w-4xl mx-auto px-6">
         {/* Encabezado estilo carta del PDF */}
         <div className="text-center mb-10">
-          <p className="font-display italic text-3xl md:text-4xl mb-1" style={{ color: '#5C3D2E' }}>
+          <p className="font-display italic text-3xl md:text-4xl mb-1" style={{ color: '#3d504a' }}>
             Platos
           </p>
           <h2
             className="font-display font-bold text-5xl md:text-6xl uppercase tracking-wide mb-2"
-            style={{ color: '#6B7F5E' }}
+            style={{ color: '#3d504a' }}
           >
             Criollos
           </h2>
-          <p className="text-sm tracking-[0.4em] uppercase font-semibold" style={{ color: '#7A5C40' }}>
+          <p className="text-sm tracking-[0.4em] uppercase font-semibold" style={{ color: '#bb7f53' }}>
             Fusión
           </p>
 
           {/* Ornamento */}
           <div className="flex items-center justify-center gap-3 mt-4 mb-6">
-            <div className="h-px w-16" style={{ backgroundColor: '#D4C9B5' }} />
-            <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#8DC63F' }} />
-            <div className="h-px w-16" style={{ backgroundColor: '#D4C9B5' }} />
+            <div className="h-px w-16" style={{ backgroundColor: '#99a690' }} />
+            <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#93c01f' }} />
+            <div className="h-px w-16" style={{ backgroundColor: '#99a690' }} />
           </div>
         </div>
 
@@ -102,7 +102,7 @@ export default function MenuSection() {
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 font-semibold px-6 py-2.5 rounded-full text-sm transition-colors shadow-md"
-            style={{ backgroundColor: '#5C3D2E', color: '#F5F0E8' }}
+            style={{ backgroundColor: '#3d504a', color: '#d7cbbe' }}
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM6 20V4h5v7h7v9H6z"/>
@@ -120,8 +120,8 @@ export default function MenuSection() {
               className="font-bold text-sm tracking-wide uppercase px-5 py-2 rounded-sm transition-all"
               style={
                 tab === t.key
-                  ? { backgroundColor: '#6B7F5E', color: '#FFFFFF' }
-                  : { backgroundColor: '#D4C9B5', color: '#5C3D2E' }
+                  ? { backgroundColor: '#3d504a', color: '#ffffff' }
+                  : { backgroundColor: '#d7cbbe', color: '#3d504a' }
               }
             >
               {t.label}
@@ -131,7 +131,7 @@ export default function MenuSection() {
 
         {/* Nota makis */}
         {tab === 'makis' && (
-          <p className="text-center text-sm mb-6 italic" style={{ color: '#7A5C40' }}>
+          <p className="text-center text-sm mb-6 italic" style={{ color: '#99a690' }}>
             10 cortes · Disponible lunes a viernes de 5pm a 10pm
           </p>
         )}
@@ -140,9 +140,9 @@ export default function MenuSection() {
         <div
           className="rounded-sm p-6 md:p-10 shadow-sm"
           style={{
-            backgroundColor: '#FFFFFF',
-            border: '1px solid #D4C9B5',
-            boxShadow: '0 2px 16px rgba(92,61,46,0.06)',
+            backgroundColor: '#ffffff',
+            border: '1px solid #99a690',
+            boxShadow: '0 2px 16px rgba(61,80,74,0.08)',
           }}
         >
           {items.map(item => (

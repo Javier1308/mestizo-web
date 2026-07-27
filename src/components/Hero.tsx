@@ -13,12 +13,12 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-3xl mx-auto w-full">
         <img
-          src="/LogoSinFondo.png"
+          src="/LogoNuevo.png"
           alt="Mestizo"
           className="mx-auto mb-2 w-72 md:w-[28rem] object-contain drop-shadow-lg"
         />
         <p className="text-cream text-sm md:text-base tracking-[0.4em] uppercase font-light mt-1 drop-shadow">
-          Barra Criolla · San Isidro
+          Restobar · San Isidro
         </p>
 
         <p className="text-cream/90 text-xl md:text-2xl font-display italic mt-8 mb-10 leading-relaxed drop-shadow">
@@ -51,7 +51,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-amber-brand">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-amber-brand" style={{ animation: 'float-down 2s ease-in-out infinite' }}>
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>

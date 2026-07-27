@@ -17,9 +17,9 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
-          <img src="/Llama1.jpeg" alt="Mestizo llama" className="w-9 h-9 rounded-full object-cover" />
-          <img src="/MestizoNombre.jpeg" alt="Mestizo" className="h-8 w-auto object-contain" />
-          <span className="text-cream text-xs font-light tracking-widest hidden sm:block">| Barra Criolla</span>
+          <img src="/Llama1.jpg" alt="Mestizo llama" className="w-9 h-9 rounded-full object-cover" />
+          <img src="/MestizoNombre.png" alt="Mestizo" className="h-8 w-auto object-contain" />
+          <span className="text-cream text-xs font-light tracking-widest hidden sm:block">| Restobar</span>
         </a>
 
         {/* Desktop nav */}

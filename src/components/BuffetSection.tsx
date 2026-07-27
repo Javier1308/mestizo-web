@@ -112,7 +112,7 @@ export default function BuffetSection() {
                 key={i}
                 onClick={() => goTo(i)}
                 className="w-2.5 h-2.5 rounded-full transition-colors"
-                style={{ background: i === current ? 'var(--color-amber-brand, #D4A017)' : 'rgba(255,255,255,0.3)' }}
+                style={{ background: i === current ? '#93c01f' : 'rgba(255,255,255,0.3)' }}
                 aria-label={`Ver ${platos[i].nombre}`}
               />
             ))}

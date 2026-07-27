@@ -5,17 +5,20 @@ export default {
     extend: {
       colors: {
         brown: {
-          DEFAULT: '#7B3020',
-          dark: '#5C2810',
-          light: '#9B4030',
+          DEFAULT: '#3d504a',
+          dark: '#2d3c37',
+          light: '#4d6460',
         },
         amber: {
-          brand: '#E89520',
-          light: '#F0C040',
+          brand: '#93c01f',
+          light: '#a8d42a',
         },
+        'lime-mestizo': '#93c01f',
+        'sage-mestizo': '#99a690',
+        copper: '#bb7f53',
         cream: {
-          DEFAULT: '#F5EDD8',
-          dark: '#EDE0C4',
+          DEFAULT: '#d7cbbe',
+          dark: '#c5b8a8',
         },
       },
       fontFamily: {

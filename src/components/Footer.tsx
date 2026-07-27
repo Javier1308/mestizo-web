@@ -2,8 +2,8 @@ export default function Footer() {
   return (
     <footer className="bg-brown-dark text-cream/60 py-8 text-center text-sm">
       <div className="max-w-4xl mx-auto px-6">
-        <img src="/MestizoNombre.jpeg" alt="Mestizo" className="mx-auto mb-1 h-14 w-auto object-contain" />
-        <p className="text-xs tracking-widest mb-4">Barra Criolla · San Isidro</p>
+        <img src="/MestizoNombre.png" alt="Mestizo" className="mx-auto mb-1 h-14 w-auto object-contain" />
+        <p className="text-xs tracking-widest mb-4">Restobar · San Isidro</p>
         <div className="flex justify-center gap-6 mb-4">
           <a
             href="https://www.instagram.com/mestizo_peru/"
@@ -26,7 +26,7 @@ export default function Footer() {
           </a>
         </div>
         <p className="text-xs text-cream/30">
-          © {new Date().getFullYear()} Mestizo | Barra Criolla. Todos los derechos reservados.
+          © {new Date().getFullYear()} Mestizo | Restobar. Todos los derechos reservados.
         </p>
       </div>
     </footer>
