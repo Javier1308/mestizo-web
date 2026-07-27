@@ -38,7 +38,7 @@ export default function BebidasSection() {
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 font-semibold px-6 py-2.5 rounded-full text-sm transition-colors shadow-md"
-            style={{ backgroundColor: '#D4A843', color: '#2C1810' }}
+            style={{ backgroundColor: '#3d504a', color: '#d7cbbe' }}
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM6 20V4h5v7h7v9H6z"/>
