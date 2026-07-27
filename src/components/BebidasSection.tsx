@@ -102,7 +102,7 @@ export default function BebidasSection() {
                   <p className="font-semibold text-amber-brand mb-1">{m.name}</p>
                   <p className="text-cream/60 text-sm">{m.desc}</p>
                   <div className="mt-3 bg-amber-brand/20 rounded-full px-3 py-1 text-amber-brand text-xs font-bold">
-                    2 x S/. 19.9
+                    2 x S/. 25
                   </div>
                 </div>
               ))}
