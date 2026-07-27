@@ -74,7 +74,7 @@ export default function BebidasSection() {
                     <p className="font-medium text-cream">{t.name}</p>
                     {t.desc && <p className="text-cream/50 text-xs mt-0.5">{t.desc}</p>}
                   </div>
-                  <span className="text-amber-brand font-bold shrink-0 ml-4">S/. {t.price}</span>
+                  <span className="text-amber-brand font-bold shrink-0 ml-4">{t.price}</span>
                 </div>
               ))}
             </div>
@@ -88,7 +88,7 @@ export default function BebidasSection() {
                     <p className="font-medium text-cream">{b.name}</p>
                     {b.desc && <p className="text-cream/50 text-xs mt-0.5">{b.desc}</p>}
                   </div>
-                  <span className="text-amber-brand font-bold shrink-0 ml-4">S/. {b.price}</span>
+                  <span className="text-amber-brand font-bold shrink-0 ml-4">{b.price}</span>
                 </div>
               ))}
             </div>
@@ -102,7 +102,7 @@ export default function BebidasSection() {
                   <p className="font-semibold text-amber-brand mb-1">{m.name}</p>
                   <p className="text-cream/60 text-sm">{m.desc}</p>
                   <div className="mt-3 bg-amber-brand/20 rounded-full px-3 py-1 text-amber-brand text-xs font-bold">
-                    2 x S/. 25
+                    2 x 25
                   </div>
                 </div>
               ))}
@@ -119,7 +119,7 @@ export default function BebidasSection() {
                       <span className="font-medium text-cream">{c.name}</span>
                       {'note' in c && c.note && <p className="text-cream/50 text-xs">{c.note}</p>}
                     </div>
-                    <span className="text-amber-brand font-bold">S/. {c.price}</span>
+                    <span className="text-amber-brand font-bold">{c.price}</span>
                   </div>
                 ))}
               </div>
@@ -131,7 +131,7 @@ export default function BebidasSection() {
                       <span className="font-medium text-cream">{v.name}</span>
                       <p className="text-cream/50 text-xs">{v.desc}</p>
                     </div>
-                    <span className="text-amber-brand font-bold">S/. {v.price}</span>
+                    <span className="text-amber-brand font-bold">{v.price}</span>
                   </div>
                 ))}
               </div>

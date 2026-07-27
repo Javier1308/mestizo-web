@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="bg-brown-dark text-cream/60 py-8 text-center text-sm">
       <div className="max-w-4xl mx-auto px-6">
-        <img src="/MestizoNombre.png" alt="Mestizo" className="mx-auto mb-1 h-14 w-auto object-contain" />
+        <img src="/MestizoNegativo.png" alt="Mestizo" className="mx-auto mb-1 h-14 w-auto object-contain" />
         <p className="text-xs tracking-widest mb-4">Restobar · San Isidro</p>
         <div className="flex justify-center gap-6 mb-4">
           <a

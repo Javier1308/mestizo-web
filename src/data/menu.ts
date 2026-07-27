@@ -1,8 +1,8 @@
 // PLATOS CRIOLLOS FUSIÓN
 
 export const abrebocas = [
-  { name: 'Ostras a tu Elección', desc: 'Ostras frescas del día servidas con tu salsa favorita: al limón clásico, salsa oriental, estilo tiradito o con el toque festivo del Bloody Mary. (1 und)', price: 15 },
-  { name: 'Conchas de Abanico a tu Elección', desc: 'Conchas de abanico al instante con tu preparación preferida: al limón, estilo acevichada, en chalaca tradicional o con Bloody Mary. (3 und)', price: 30 },
+  { name: 'Ostras a tu Elección', desc: 'Ostras frescas del día servidas con tu salsa favorita: al limón clásico, salsa oriental o estilo tiradito. (1 und)', price: 15 },
+  { name: 'Conchas de Abanico a tu Elección', desc: 'Conchas de abanico al instante con tu preparación preferida: al limón, estilo acevichada o en chalaca tradicional. (3 und)', price: 30 },
   { name: 'Tiradito de Conchas', desc: 'Diez conchas de abanico bañadas en una intensa leche de tigre al ají amarillo. Suave, picante y fresco en cada bocado.', price: 30 },
   { name: 'Conchas a la Parmesana', desc: 'Seis conchas gratinadas a la perfección, cubiertas en generoso queso parmesano fundido. Doradas por fuera, jugosas por dentro.', price: 30 },
   { name: 'Anticuchos', desc: 'Tiernos anticuchos de corazón de res a la parrilla, acompañados de papas doradas, choclo tierno, queso frito y nuestro ají parrillero de la casa.', price: 35 },

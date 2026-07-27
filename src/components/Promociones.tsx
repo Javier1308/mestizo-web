@@ -13,7 +13,7 @@ const otherPromos = [
     emoji: '⏰',
     title: 'Happy Hour',
     subtitle: 'Todos los días',
-    price: '2 x S/. 35',
+    price: '2 x 35',
     detail: 'Válido todos los días de la semana',
     items: ['Chilcanos', 'Piña Colada', 'Cuba Libre', 'Mojito', 'Tinto de Verano'],
   },
@@ -21,7 +21,7 @@ const otherPromos = [
     emoji: '🍋',
     title: 'Mocktails',
     subtitle: 'Sin Alcohol',
-    price: '2 x S/. 25',
+    price: '2 x 25',
     detail: 'Esmeralda Oriental · Jamaica Beach · Susurro de Maracuyá',
     items: ['Esmeralda Oriental', 'Jamaica Beach', 'Susurro de Maracuyá'],
   },
@@ -61,11 +61,11 @@ export default function Promociones() {
             <div className="flex flex-wrap gap-4 mb-6">
               <div className="flex-1 min-w-[140px] bg-brown-dark/40 rounded-2xl px-5 py-4 text-center">
                 <p className="text-xs text-cream/60 uppercase tracking-widest mb-1">Lun · Mar · Mié</p>
-                <p className="font-bold text-3xl text-amber-brand">S/. 49.90</p>
+                <p className="font-bold text-3xl text-amber-brand">49.90</p>
               </div>
               <div className="flex-1 min-w-[140px] bg-amber-brand rounded-2xl px-5 py-4 text-center">
                 <p className="text-xs text-brown-dark/70 uppercase tracking-widest mb-1">Jue · Vie · Sáb</p>
-                <p className="font-bold text-3xl text-brown-dark">S/. 69.90</p>
+                <p className="font-bold text-3xl text-brown-dark">69.90</p>
               </div>
             </div>
 
