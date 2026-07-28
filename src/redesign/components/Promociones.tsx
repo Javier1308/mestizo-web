@@ -95,7 +95,7 @@ export default function Promociones() {
         <div className="mt-6 grid md:grid-cols-2 gap-6">
           {otherPromos.map((p, i) => (
             <Reveal key={p.title} delay={i * 90}>
-              <div className="h-full flex flex-col rounded-[1.5rem] p-7 md:p-8" style={{ background: 'var(--forest)', border: `2px solid ${p.accent}` }}>
+              <div className="h-full rounded-[1.5rem] p-7" style={{ background: 'var(--forest)', border: `2px solid ${p.accent}` }}>
                 <div className="flex items-center justify-between">
                   <div>
                     <h3 className="display text-3xl" style={{ color: 'var(--cream-text)' }}>{p.title}</h3>
@@ -103,10 +103,10 @@ export default function Promociones() {
                   </div>
                   <span className="display text-3xl rounded-full px-5 py-2" style={{ background: p.accent, color: 'var(--forest-deep)' }}>{p.price}</span>
                 </div>
-                <ul className="mt-6 flex-1 flex flex-col justify-evenly gap-3">
+                <ul className="mt-5 space-y-2">
                   {p.items.map((item) => (
-                    <li key={item} className="flex items-center gap-3 text-base md:text-lg" style={{ color: 'var(--cream-text)' }}>
-                      <span className="w-2 h-2 rounded-full shrink-0" style={{ background: p.accent }} />
+                    <li key={item} className="flex items-center gap-2 text-sm" style={{ color: 'var(--muted-cream)' }}>
+                      <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: p.accent }} />
                       {item}
                     </li>
                   ))}
