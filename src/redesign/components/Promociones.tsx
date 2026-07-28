@@ -1,5 +1,5 @@
 import Reveal from './Reveal'
-import { WHATSAPP } from '../links'
+import { WHATSAPP, asset } from '../links'
 
 const promoTragos = [
   'Chilcanos Clásicos · Maracuyá y Frutos Rojos',
@@ -95,15 +95,21 @@ export default function Promociones() {
         <div className="mt-6 grid md:grid-cols-2 gap-6">
           {otherPromos.map((p, i) => (
             <Reveal key={p.title} delay={i * 90}>
-              <div className="h-full rounded-[1.5rem] p-7" style={{ background: 'var(--forest)', border: `2px solid ${p.accent}` }}>
-                <div className="flex items-center justify-between">
+              <div className="relative isolate overflow-hidden h-full rounded-[1.5rem] p-7" style={{ background: 'var(--forest)', border: `2px solid ${p.accent}` }}>
+                <img
+                  src={asset('llama-cool-watermark.png')}
+                  alt=""
+                  aria-hidden="true"
+                  className="absolute -right-8 -bottom-10 w-48 md:w-56 opacity-[0.14] pointer-events-none select-none z-0"
+                />
+                <div className="relative z-10 flex items-center justify-between">
                   <div>
                     <h3 className="display text-3xl" style={{ color: 'var(--cream-text)' }}>{p.title}</h3>
                     <p className="text-sm" style={{ color: 'var(--muted-cream)' }}>{p.subtitle}</p>
                   </div>
                   <span className="display text-3xl rounded-full px-5 py-2" style={{ background: p.accent, color: 'var(--forest-deep)' }}>{p.price}</span>
                 </div>
-                <ul className="mt-5 space-y-2">
+                <ul className="relative z-10 mt-5 space-y-2">
                   {p.items.map((item) => (
                     <li key={item} className="flex items-center gap-2 text-sm" style={{ color: 'var(--muted-cream)' }}>
                       <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: p.accent }} />
