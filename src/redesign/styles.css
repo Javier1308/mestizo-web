@@ -1,0 +1,159 @@
+/* ============================================================================
+   La Mesa Mestiza — parallel redesign styles (isolated to the redesign entry)
+   Type: Big Shoulders Display (poster shout) + Archivo (workhorse).
+   Not touching tailwind.config.js or src/index.css — brand colors live here as
+   CSS variables + arbitrary values so the current site renders unchanged.
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Big+Shoulders+Display:wght@600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Table world */
+  --forest: #2f3f39;
+  --forest-deep: #1e2a26;
+  --forest-800: #26332e;
+  --linen: #f2ecdd;
+  --linen-2: #e8ddc7;
+
+  /* Ink & text */
+  --ink: #1a231f;
+  --cream-text: #f5f0e4;
+  --muted: #56635a;        /* secondary text on linen — AA on --linen */
+  --muted-cream: #cdd6c9;  /* secondary text on forest */
+
+  /* Accents */
+  --lime: #93c01f;
+  --lime-bright: #a9d92e;
+  --copper: #bb7f53;         /* decorative only (borders/hairlines) */
+  --copper-bright: #d49a6c;  /* copper text on dark grounds */
+  --copper-ink: #8a5a34;     /* copper text on the linen ground — passes AA */
+  --sage: #8f9d86;
+
+  /* Chicha voice (reserved for social beats) */
+  --fucsia: #e5006e;
+  --orange: #f26a1b;
+  --grape: #5c2c86;
+}
+
+html { scroll-behavior: smooth; }
+
+/* Anchor jumps clear the sticky header */
+section[id] { scroll-margin-top: 76px; }
+
+body {
+  margin: 0;
+  font-family: 'Archivo', system-ui, sans-serif;
+  background: var(--linen);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+#root { min-height: 100vh; }
+
+/* Selection + focus */
+::selection { background: var(--lime); color: var(--ink); }
+:focus-visible {
+  outline: 3px solid var(--lime-bright);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@layer components {
+  .display {
+    font-family: 'Big Shoulders Display', 'Archivo', sans-serif;
+    font-weight: 800;
+    line-height: 0.92;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+
+  /* Section kicker — small tracked label */
+  .kicker {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+  }
+
+  /* Chicha poster lettering — stacked offset "3D" block */
+  .chicha {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 0.86;
+    color: var(--lime);
+    text-shadow:
+      2px 2px 0 var(--forest-deep),
+      5px 5px 0 var(--fucsia);
+  }
+  .chicha--fucsia { color: #fff; text-shadow: 2px 2px 0 var(--forest-deep), 5px 5px 0 var(--fucsia); }
+  .chicha--orange { color: var(--lime); text-shadow: 2px 2px 0 var(--forest-deep), 5px 5px 0 var(--orange); }
+
+  /* Radiating rays backdrop for chicha panels */
+  .rays {
+    background-image: repeating-conic-gradient(
+      from 0deg at 50% 50%,
+      rgba(242, 106, 27, 0.18) 0deg 7deg,
+      transparent 7deg 14deg
+    );
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    padding: 0.85rem 1.75rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: transform 0.18s ease, background-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+    text-decoration: none;
+    border: none;
+  }
+  .btn-lime { background: var(--lime); color: var(--ink); box-shadow: 0 6px 22px -8px rgba(147, 192, 31, 0.7); }
+  .btn-lime:hover { background: var(--lime-bright); transform: translateY(-2px); }
+  .btn-outline { background: transparent; color: var(--cream-text); border: 2px solid rgba(245, 240, 228, 0.55); }
+  .btn-outline:hover { background: var(--cream-text); color: var(--forest-deep); transform: translateY(-2px); }
+  .btn-ink-outline { background: transparent; color: var(--forest-deep); border: 2px solid var(--forest); }
+  .btn-ink-outline:hover { background: var(--forest); color: var(--cream-text); transform: translateY(-2px); }
+
+  /* Pill / tab */
+  .pill {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.5rem 1.15rem;
+    border-radius: 999px;
+    transition: background-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+    cursor: pointer;
+    border: none;
+  }
+
+  /* Copper hairline divider */
+  .hairline { border-top: 1px solid color-mix(in srgb, var(--copper) 45%, transparent); }
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  will-change: opacity, transform;
+}
+.reveal.is-in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+  .reveal { opacity: 1; transform: none; }
+}
