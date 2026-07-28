@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import Reveal from './Reveal'
 import { CARTA_DIGITAL_URL } from '../links'
-import { abrebocas, entradas, masBuscados, menuKids, makis } from '../../data/menu'
+import { piqueos, abrebocas, entradas, masBuscados, menuKids, makis } from '../../data/menu'
 
 type Price = number | { chico: number; grande: number }
 interface MenuItem { name: string; desc?: string; price: Price }
-type Tab = 'abrebocas' | 'entradas' | 'masBuscados' | 'kids' | 'makis'
+type Tab = 'piqueos' | 'abrebocas' | 'entradas' | 'masBuscados' | 'kids' | 'makis'
 
 const tabs: { key: Tab; label: string }[] = [
   { key: 'abrebocas', label: 'Abrebocas' },
@@ -13,9 +13,11 @@ const tabs: { key: Tab; label: string }[] = [
   { key: 'masBuscados', label: 'Los Más Buscados' },
   { key: 'kids', label: 'Menú Kids' },
   { key: 'makis', label: 'Makis' },
+  { key: 'piqueos', label: 'Piqueos' },
 ]
 
 const data: Record<Tab, MenuItem[]> = {
+  piqueos,
   abrebocas,
   entradas,
   masBuscados,

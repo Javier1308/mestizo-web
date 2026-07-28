@@ -12,6 +12,21 @@ export const abrebocas = [
   { name: 'Alitas BBQ', desc: 'Ocho alitas glaseadas en salsa BBQ de la casa, servidas con un mix de papas fritas.', price: 28 },
 ]
 
+export const piqueos = [
+  { name: 'Ronda Mestiza', desc: 'Tequeños de queso, chicharrón de pollo, alitas BBQ y mix de papas y camotitos fritos.', price: 52 },
+  { name: 'Ronda Picante', desc: 'Alitas búfalo, deditos de pollo, mix de papas y camotes fritos.', price: 45 },
+  { name: '10 Tequeños de Queso Peruano', desc: 'Con guacamole.', price: 28 },
+  { name: '9 Tequeños de Lomito Saltado', price: 30 },
+  { name: '8 Alitas BBQ', desc: 'Con papitas fritas.', price: 35 },
+  { name: '6 Langostinos al Panko', price: 30 },
+  { name: 'Chicharrón de Pollo', desc: 'Con mix de papitas y camotes fritos.', price: 35 },
+  { name: 'Anticuchos', desc: '2 palos con papas doradas, choclo y ají.', price: 35 },
+  { name: 'Ceviche de Pescado', price: 45 },
+  { name: '6 Causitas Limeñas', price: 25 },
+  { name: 'Choripollo', desc: 'Para compartir.', price: 45 },
+  { name: 'Salchipapa Especial', desc: 'Para compartir.', price: 35 },
+]
+
 export const entradas = [
   { name: 'Ceviche de Pescado', desc: 'Pesca del día marinada en nuestra leche de tigre de la casa, servida con camote dulce y choclo tierno. El ceviche que define a Mestizo.', price: 45 },
   { name: 'Ceviche Conchas Negras', desc: 'Doce jugosas conchas negras acevichadas en leche de tigre intensa. El afrodisíaco favorito de Lima, servido con camote y choclo.', price: 45 },

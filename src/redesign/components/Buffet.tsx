@@ -3,13 +3,12 @@ import Reveal from './Reveal'
 import { WHATSAPP, asset } from '../links'
 
 const platos = [
-  { nombre: 'Ají de Gallina', img: 'AjiGallina.jpeg' },
-  { nombre: 'Carapulcra con Sopa Seca', img: 'CarapulcraSopaseca.jpeg' },
-  { nombre: 'Cau Cau', img: 'CauCau.jpeg' },
-  { nombre: 'Chanfainita', img: 'Chanfainita.jpeg' },
-  { nombre: 'Olluquito con Carapulcra', img: 'OlluquitoCarapulcra.jpeg' },
-  { nombre: 'Papa a la Huancaína', img: 'PapaHuancaina.jpeg' },
-  { nombre: 'Seco con Frejoles', img: 'SecoFrejoles.jpeg' },
+  { nombre: 'Anticuchos', img: 'Anticuchos.jpg' },
+  { nombre: 'Arroz con Pato', img: 'ArrozConPato.jpg' },
+  { nombre: 'Osobuco de Res al Vino', img: 'OsobucoResAlVino.jpg' },
+  { nombre: 'Bife Ancho', img: 'BifeAncho.jpg' },
+  { nombre: 'Langostinos Jumbo', img: 'LangostinosJumbo.jpg' },
+  { nombre: 'Causa Limeña', img: 'CausaLimena.jpg' },
 ]
 
 export default function Buffet() {
@@ -51,6 +50,10 @@ export default function Buffet() {
               Incluye mesa de postres:{' '}
               <span style={{ color: 'var(--lime-bright)' }}>Mazamorra Morada</span> y{' '}
               <span style={{ color: 'var(--lime-bright)' }}>Arroz con Leche</span>.
+            </p>
+
+            <p className="mt-2 text-sm italic" style={{ color: 'var(--muted-cream)' }}>
+              Las imágenes son referenciales de platos a la carta.
             </p>
 
             <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="btn btn-lime mt-8">
